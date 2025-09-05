@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <nav>
+    <h2>Task Manager</h2>
+    <button onclick="showSection('contact')">Contact</button>
+    <button onclick="showSection('todo')">To-Do List</button>
+    <button onclick="showSection('gallerySection')">Image Gallery</button>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    
+    <!-- Contact Form -->
+    <section id="contact" class="form-container">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- To-Do List -->
+    <section id="todo" class="todo-container">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add new task">
+      <button onclick="addTask()">Add</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallerySection" class="gallery-container">
+      <h2>Image Gallery</h2>
+      <div class="gallery-controls">
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="addImage()">Upload</button>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
